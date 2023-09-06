@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".screen.SideDishFragment">
+
+
+    <TextView
+            android:id="@+id/tvHead"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textStyle="italic"
+            android:textSize="35dp"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Món Phụ" />
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvList"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tvHead"
+            android:layout_above="@+id/layoutEnd"
+            android:layout_height="wrap_content" />
+
+    <LinearLayout
+            android:id="@+id/layoutEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/black"
+                android:text="Back"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:layout_marginRight="5dp"
+                android:textStyle="italic" />
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/black"
+                android:text="Next"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+
+                android:textStyle="italic" />
+    </LinearLayout>
+
+</RelativeLayout>

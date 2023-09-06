@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/mainCourseFragment">
+
+    <fragment android:id="@+id/mainCourseFragment" android:name="com.example.appfood.screen.MainCourseFragment"
+              android:label="fragment_main_course" tools:layout="@layout/fragment_main_course">
+        <action android:id="@+id/action_mainCourseFragment_to_sideDishFragment" app:destination="@id/sideDishFragment"/>
+    </fragment>
+    <fragment android:id="@+id/sideDishFragment" android:name="com.example.appfood.screen.SideDishFragment"
+              android:label="fragment_side_dish" tools:layout="@layout/fragment_side_dish">
+        <action android:id="@+id/action_sideDishFragment_to_dessertFragment" app:destination="@id/dessertFragment"/>
+    </fragment>
+    <fragment android:id="@+id/dessertFragment" android:name="com.example.appfood.screen.DessertFragment"
+              android:label="fragment_dessert" tools:layout="@layout/fragment_dessert">
+        <action android:id="@+id/action_dessertFragment_to_beverageFragment" app:destination="@id/beverageFragment"/>
+    </fragment>
+    <fragment android:id="@+id/beverageFragment" android:name="com.example.appfood.screen.BeverageFragment"
+              android:label="fragment_beverage" tools:layout="@layout/fragment_beverage">
+        <action android:id="@+id/action_beverageFragment_to_finalFragment" app:destination="@id/finalFragment"/>
+    </fragment>
+    <fragment android:id="@+id/finalFragment" android:name="com.example.appfood.screen.FinalFragment"
+              android:label="fragment_final" tools:layout="@layout/fragment_final"/>
+</navigation>
